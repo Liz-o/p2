@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function ExeStringFunc(){
+            var str = 'Test String';
+            // debugger;
+            console.log('string length : ' + str.length);
+            console.log('string upper case : ' + str.toUpperCase());
+            console.log('string lower case : ' + str.toLowerCase());
+            console.log('string indexof "Str" :', str.indexOf('Str'));
+        }
+
+        ExeStringFunc();
+
+        var arr=[12,34,56,78,90];
+        function ArraySum(arr){
+            let sum=0;
+            for (let index = 0; index < arr.length; index++) {
+                sum+=arr[index];
+            }
+            // let ind=0;
+            // while (ind<arr.length){
+            //     sum+=arr[ind];//sum= sum + arr[ind]
+            //     ind++; //ind = ind +1;
+            // }
+            console.log('The sum of the array is : ' + sum);
+        }
+        ArraySum(arr);
+
+        function IsAllItemsNum(arr){
+           
+            var bAllnum=true;
+            for (let index = 0; index < arr.length; index++) {
+                if (isNaN(arr[index])){
+                    //  debugger;
+                    console.log('Not all the array items are numbers. The item :' + index + ' is not a number')
+                    bAllnum=false;
+                }
+                // isNaN(arr[index]) && bAllnum=false;
+                //if (isNaN(arr[index])){
+                //     return console.log('Not all array items are numbers')
+                // }
+
+            }
+            if (bAllnum)
+                console.log('All array items are numbers')
+        }
+        IsAllItemsNum(arr);
+        IsAllItemsNum([12,34,'bbb',56,78,90, 100]);
+
+        function PrintDualNumbers(arr){
+            for (let index = 0; index < arr.length; index++) {
+                arr[index] % 2 == 0 && console.log(arr[index] );  
+            }
+        } 
+        PrintDualNumbers([1,5,3,32,12,77,98]);
+        function PrintMin(arr){
+            var min=arr[0];
+            for (let index = 1; index < arr.length; index++) {
+                if (min>arr[index]){
+                     min=arr[index];
+                }
+            }
+            console.log('The minimum value is : ' + min );
+        }
+
+        PrintMin([101,1,5,3,32,12,77,98,0]);
+
+        function PrintAverage(arr){
+            
+            var sum=arr[0];
+            for (let index = 1; index < arr.length; index++) {
+                sum+=arr[index];
+            }
+            console.log('The average is : ' + sum/arr.length);
+        }
+
+        PrintAverage([2,6,3,32,12]);
+
+        function Compare2ArrayLength(arr1, arr2){
+            
+            if (arr1.length>arr2.length){
+                 console.log('First array is longer');
+                 return arr1
+            }
+            else
+            {
+                console.log('Second array is longer');
+                return arr2
+            }
+        }
+        // Compare2ArrayLength([2,6,3,32,12],[101,1,5,3]);
+
+        function GetItem(arr, index){
+            return console.log( arr[index]);
+        }
+        GetItem([101,1,5,3], 0);
+        
+        Compare2ArrayLength(Compare2ArrayLength([101,1,5,3], [2,6,3,32,12]), Compare2ArrayLength([101,1,5,3,32,12,77,98,0],[1,5,3,32,12,77,98]))
+
+        var x=7;
+        function y(x){
+            x+=5
+        }
+        x++;
+        y(9);
+        x+=5;
+    </script>
+<body>
+    
+</body>
+</html>
